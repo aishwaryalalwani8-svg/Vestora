@@ -1,0 +1,668 @@
+
+.market-rush-page {
+  min-height: 100vh;
+  padding: 28px 4%;
+  color: #f7f2ff;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(105, 57, 174, .25), transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(204, 66, 140, .10), transparent 30%),
+    #100c1b;
+  font-family: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.market-rush-page * {
+  box-sizing: border-box;
+}
+
+.rush-back {
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
+  color: #cfc4e7;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.rush-back:hover {
+  background: rgba(255,255,255,.1);
+  color: white;
+}
+
+.rush-eyebrow {
+  color: #c79cff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.rush-intro {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.intro-orbit {
+  width: 105px;
+  height: 105px;
+  display: grid;
+  place-items: center;
+  border-radius: 32px;
+  font-size: 53px;
+  color: #d9b5ff;
+  background: linear-gradient(145deg, #8d4de0, #3a216a);
+  box-shadow: 0 20px 65px rgba(148, 83, 226, .35), inset 0 2px 2px rgba(255,255,255,.3);
+  transform: rotate(-8deg);
+  margin-bottom: 35px;
+}
+
+.rush-intro h1,
+.game-heading h1,
+.rush-result h1 {
+  font-size: clamp(42px, 7vw, 82px);
+  letter-spacing: -4px;
+  line-height: .95;
+  margin: 18px 0;
+  font-weight: 950;
+}
+
+.rush-intro h1 span,
+.game-heading h1 span,
+.rush-result h1 span {
+  color: #c58aff;
+}
+
+.rush-intro > p,
+.rush-result > p {
+  color: #a79bb8;
+  max-width: 480px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.intro-stats,
+.result-stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.intro-stats div,
+.result-stats div {
+  min-width: 115px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px;
+  background: rgba(255,255,255,.045);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.intro-stats strong,
+.result-stats strong {
+  font-size: 25px;
+  color: #e5c6ff;
+}
+
+.intro-stats span,
+.result-stats span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #9588a9;
+  font-weight: 800;
+}
+
+.start-rush-button {
+  padding: 17px 28px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #b36aff, #e17bd0);
+  color: #1b1027;
+  font-weight: 950;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(183, 100, 238, .24);
+  transition: .25s ease;
+}
+
+.start-rush-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(183, 100, 238, .4);
+}
+
+.start-rush-button span {
+  margin-left: 20px;
+}
+
+.simulation-note {
+  color: #736780;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  margin-top: 20px;
+}
+
+.game-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.live-indicator,
+.game-xp {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #c5b5da;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-indicator span {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: #a9f66a;
+  box-shadow: 0 0 12px #a9f66a;
+}
+
+.game-xp {
+  color: #e2bbff;
+  padding: 10px 14px;
+  border: 1px solid rgba(197,138,255,.25);
+  border-radius: 9px;
+  background: rgba(174,105,255,.09);
+}
+
+.game-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 48px 0 25px;
+}
+
+.game-heading h1 {
+  font-size: clamp(34px, 5vw, 55px);
+  margin-bottom: 0;
+}
+
+.round-counter {
+  color: #8f829e;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.round-counter strong {
+  color: #e0c0ff;
+  font-size: 28px;
+  margin-left: 8px;
+}
+
+.game-progress {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.game-progress div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9d5be8, #ed83c8);
+  transition: width .35s ease;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 22px;
+}
+
+.market-panel,
+.decision-panel {
+  border: 1px solid rgba(255,255,255,.09);
+  background: linear-gradient(145deg, rgba(40,29,57,.94), rgba(25,18,37,.96));
+  border-radius: 18px;
+  padding: 25px;
+  min-width: 0;
+  box-shadow: 0 18px 55px rgba(0,0,0,.18);
+}
+
+.panel-topline,
+.decision-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  color: #bca9d0;
+  font-weight: 900;
+}
+
+.fictional-tag {
+  color: #a9f66a;
+  font-size: 8px;
+  border: 1px solid rgba(169,246,106,.2);
+  padding: 6px 9px;
+  border-radius: 20px;
+}
+
+.stock-identity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.stock-symbol {
+  color: #b58ae9;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.stock-identity h2 {
+  font-size: 19px;
+  margin: 8px 0 0;
+}
+
+.stock-change {
+  font-size: 13px;
+  font-weight: 900;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+
+.stock-change.up {
+  color: #b6ff65;
+  background: rgba(182,255,101,.09);
+}
+
+.stock-change.down {
+  color: #ff7e98;
+  background: rgba(255,126,152,.09);
+}
+
+.stock-price {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 20px 0 5px;
+}
+
+.stock-price small {
+  font-size: 9px;
+  color: #887b98;
+  letter-spacing: 1px;
+}
+
+.chart-area {
+  margin-top: 28px;
+  padding: 17px 15px 10px;
+  border-radius: 12px;
+  background: rgba(0,0,0,.17);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #91839f;
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.chart-area svg {
+  width: 100%;
+  height: 145px;
+  overflow: visible;
+}
+
+.market-insight {
+  border-left: 3px solid #bb7af2;
+  padding: 5px 0 5px 16px;
+  margin-top: 25px;
+}
+
+.market-insight > span {
+  color: #c18cf3;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+}
+
+.market-insight h3 {
+  font-size: 17px;
+  margin: 10px 0 7px;
+}
+
+.market-insight p {
+  color: #a99bb8;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.countdown {
+  color: #b6ff65;
+  font-size: 19px;
+  font-weight: 900;
+  background: rgba(182,255,101,.08);
+  padding: 8px 12px;
+  border-radius: 9px;
+}
+
+.countdown.urgent {
+  color: #ff738d;
+  background: rgba(255,115,141,.1);
+  animation: timer-pulse .7s infinite alternate;
+}
+
+@keyframes timer-pulse {
+  to { transform: scale(1.06); }
+}
+
+.decision-question {
+  margin: 36px 0 25px;
+}
+
+.decision-question h2 {
+  font-size: 27px;
+  margin: 0 0 10px;
+  letter-spacing: -.8px;
+}
+
+.decision-question p {
+  color: #9c8eaa;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.decision-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.decision-buttons button {
+  min-width: 0;
+  border-radius: 13px;
+  padding: 19px 8px;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  transition: .2s ease;
+  color: white;
+}
+
+.decision-buttons button:hover:not(:disabled) {
+  transform: translateY(-5px);
+  filter: brightness(1.2);
+}
+
+.decision-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.decision-buttons button > span {
+  font-size: 25px;
+}
+
+.decision-buttons strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.decision-buttons small {
+  font-size: 8px;
+  color: inherit;
+  opacity: .7;
+  text-align: center;
+}
+
+.buy-choice {
+  background: linear-gradient(145deg, #376e4e, #1c3d30);
+  border-color: rgba(151,255,173,.2) !important;
+}
+
+.sell-choice {
+  background: linear-gradient(145deg, #803f55, #482235);
+  border-color: rgba(255,145,167,.2) !important;
+}
+
+.hold-choice {
+  background: linear-gradient(145deg, #7056a2, #3b2d62);
+  border-color: rgba(195,161,255,.2) !important;
+}
+
+.decision-hint {
+  text-align: center;
+  color: #786b88;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-top: 30px;
+}
+
+.decision-feedback {
+  padding: 17px;
+  border-radius: 12px;
+  margin-top: 23px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.decision-feedback.correct {
+  border-color: rgba(182,255,101,.35);
+}
+
+.decision-feedback.incorrect {
+  border-color: rgba(255,126,152,.3);
+}
+
+.decision-feedback > strong {
+  color: #b6ff65;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.decision-feedback.incorrect > strong {
+  color: #ff8da3;
+}
+
+.decision-feedback p {
+  color: #c2b5d0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.decision-feedback > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #c59bfa;
+  font-weight: 900;
+}
+
+.decision-feedback button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  margin-top: 15px;
+  background: #c18af1;
+  color: #1d1229;
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 35px;
+  color: #72647f;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.rush-result {
+  max-width: 650px;
+  margin: 35px auto;
+  text-align: center;
+}
+
+.result-trophy {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  margin: 30px auto;
+  font-size: 52px;
+  color: #ffdc8b;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #8159bd, #3b245e);
+  box-shadow: 0 15px 45px rgba(168,105,229,.25);
+  transform: rotate(-6deg);
+}
+
+.rush-result h1 {
+  font-size: clamp(35px, 5vw, 58px);
+}
+
+.result-review {
+  margin: 30px 0;
+  padding: 20px;
+  text-align: left;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+}
+
+.result-review h3 {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #c39bf0;
+  margin: 0 0 15px;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 35px 1fr 80px 100px;
+  gap: 8px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  font-size: 10px;
+}
+
+.review-row:last-child {
+  border-bottom: none;
+}
+
+.review-row > span:first-child {
+  color: #897a9b;
+}
+
+.review-row > span:nth-child(3) {
+  color: #c6b2dd;
+}
+
+.review-good {
+  color: #b6ff65;
+}
+
+.review-bad {
+  color: #ff809a;
+}
+
+.result-back {
+  display: block;
+  margin: 18px auto;
+  color: #b9a9ca;
+  border: none;
+  background: transparent;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .game-heading {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 520px) {
+  .market-rush-page {
+    padding: 20px 15px;
+  }
+
+  .game-topbar {
+    flex-wrap: wrap;
+  }
+
+  .game-heading {
+    align-items: start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .market-panel,
+  .decision-panel {
+    padding: 18px;
+  }
+
+  .stock-price {
+    font-size: 34px;
+  }
+
+  .decision-buttons {
+    gap: 6px;
+  }
+
+  .decision-buttons button {
+    padding: 15px 4px;
+  }
+
+  .decision-buttons small {
+    font-size: 7px;
+  }
+
+  .game-footer {
+    flex-direction: column;
+  }
+
+  .review-row {
+    grid-template-columns: 25px 1fr 65px 85px;
+    font-size: 9px;
+  }
+}

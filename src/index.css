@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #e8eee8;
+  background: #090c0c;
+  min-width: 320px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+button { color: inherit; }
+button:focus-visible, input:focus-visible { outline: 2px solid #42b883; outline-offset: 3px; }
+::selection { color: #f4fff8; background: #168b62; }
+
+#root {
+  min-height: 100vh;
+}

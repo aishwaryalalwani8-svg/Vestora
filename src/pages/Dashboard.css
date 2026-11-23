@@ -1,0 +1,1159 @@
+
+
+/* =========================================
+   VESTORA — PREMIUM DARK LEARNING PLATFORM
+========================================= */
+
+.dashboard {
+  --bg: #111210;
+  --surface: #1b1c19;
+  --surface-raised: #22231f;
+  --border: #34342e;
+  --text: #f2eee5;
+  --muted: #96948a;
+  --amber: #d6a45c;
+  --amber-light: #efc987;
+  --green: #91ad83;
+
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 38px 50px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  min-width: 0;
+}
+
+/* WELCOME BANNER */
+
+.dashboard .market-hero {
+  position: relative;
+  min-height: 245px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 15px;
+  background: linear-gradient(115deg, #24231e, #171814);
+  border: 1px solid #454035;
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+}
+
+.dashboard .bull-background {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  top: 0;
+  width: 58%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  opacity: .82;
+}
+
+.dashboard .hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg,
+    #24231e 0%,
+    rgba(36,35,30,.97) 34%,
+    rgba(36,35,30,.66) 58%,
+    rgba(36,35,30,.08) 100%);
+}
+
+.dashboard .hero-content {
+  padding: 38px 42px;
+  max-width: 570px;
+  color: var(--text);
+}
+
+.dashboard .market-tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 30px;
+  background: rgba(214,164,92,.12);
+  border: 1px solid rgba(214,164,92,.32);
+  color: var(--amber-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dashboard .hero-content h1 {
+  font-size: clamp(26px,3vw,38px);
+  line-height: 1.2;
+  margin: 19px 0 11px;
+  font-weight: 700;
+  letter-spacing: -.8px;
+}
+
+.dashboard .hero-content p {
+  color: #c0bbae;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* STATISTICS */
+
+.dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 18px;
+}
+
+
+/* =========================================
+   STAT CARDS — PREMIUM VESTORA THEME
+========================================= */
+
+.dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Common card styling */
+.dashboard .stat-card {
+  position: relative;
+  min-width: 0;
+  min-height: 150px;
+  padding: 21px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(207, 169, 111, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* Virtual Wallet — warm bronze */
+.dashboard .wallet-card {
+  background: linear-gradient(135deg, #59452c, #30291f) !important;
+  border-color: rgba(232, 197, 141, 0.35) !important;
+}
+
+/* Total Invested — muted olive */
+.dashboard .stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #303a30, #222820) !important;
+}
+
+/* Portfolio Value — dark champagne */
+.dashboard .stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #44382b, #29241e) !important;
+}
+
+/* Profit / Loss — subtle forest green */
+.dashboard .profit-card {
+  background: linear-gradient(135deg, #293e32, #202a23) !important;
+  border-color: rgba(126, 166, 126, 0.25) !important;
+}
+
+/* Hover effect */
+.dashboard .stat-card:hover,
+.dashboard .dashboard-panel:hover {
+  transform: translateY(-2px);
+  border-color: #776044;
+}
+
+/* Card heading */
+.dashboard .stat-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Card icons */
+.dashboard .stat-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: rgba(214, 164, 92, 0.12);
+  color: var(--amber-light);
+  border: 1px solid rgba(214, 164, 92, 0.2);
+  border-radius: 9px;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+  .dashboard .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.dashboard .tiny-orbit {
+  color: var(--amber);
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.dashboard .muted-separator {
+  margin: 0 3px;
+}
+
+.dashboard .flat-indicator {
+  color: var(--amber);
+}
+
+.dashboard .wallet-card {
+  background: linear-gradient(145deg,#30271b,#201e19);
+  border-color: #665037;
+}
+
+.dashboard .wallet-glow {
+  position: absolute;
+  right: -35px;
+  bottom: -50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(214,164,92,.10);
+  pointer-events: none;
+}
+
+/* PERFORMANCE + PROFILE */
+
+.dashboard .main-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.65fr) minmax(280px,.9fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.dashboard .performance-panel,
+.dashboard .level-panel,
+.dashboard .achievements-panel,
+.dashboard .market-panel {
+  padding: 25px;
+}
+
+.dashboard .panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard .panel-kicker {
+  color: var(--amber);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+}
+
+.dashboard .panel-heading h3,
+.dashboard .achievement-heading h3 {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+}
+
+.dashboard .range-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: #141511;
+  border: 1px solid #34342e;
+  border-radius: 8px;
+}
+
+.dashboard .range-tabs button {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard .range-tabs button.selected {
+  color: #1b1914;
+  background: var(--amber);
+  box-shadow: 0 2px 8px rgba(214,164,92,.18);
+}
+
+.dashboard .chart-summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 22px;
+}
+
+.dashboard .chart-summary strong {
+  font-size: 25px;
+  color: var(--text);
+}
+
+.dashboard .chart-change {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.dashboard .chart-caption {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.dashboard .performance-chart {
+  position: relative;
+  padding-left: 48px;
+  width: 100%;
+}
+
+.dashboard .performance-chart svg {
+  display: block;
+  width: 100%;
+  height: 145px;
+  overflow: visible;
+}
+
+.dashboard .chart-y-labels {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .chart-area {
+  fill: url(#chartFill);
+}
+
+.dashboard .chart-stroke {
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dashboard .chart-endpoint {
+  fill: var(--amber-light);
+  stroke: #fff0d5;
+  stroke-width: 2;
+}
+
+.dashboard .chart-x-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.dashboard .chart-footnote {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 23px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .chart-footnote i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+  margin-right: 5px;
+}
+
+/* INVESTOR PROFILE */
+
+.dashboard .level-panel {
+  background:
+    radial-gradient(circle at 50% 15%,rgba(214,164,92,.10),transparent 42%),
+    linear-gradient(145deg,#25241f,#191a17);
+}
+
+.dashboard .level-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dashboard .level-season {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.dashboard .level-emblem {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  margin: 18px auto 13px;
+  border-radius: 50%;
+  background: linear-gradient(145deg,#51412b,#28241c);
+  border: 2px solid var(--amber);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--amber-light);
+  box-shadow: 0 8px 22px rgba(0,0,0,.3),
+              inset 0 2px 8px rgba(255,255,255,.08);
+}
+
+.dashboard .level-emblem span {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.dashboard .level-emblem i {
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.dashboard .level-emblem b {
+  position: absolute;
+  right: -3px;
+  top: -4px;
+  color: var(--amber-light);
+}
+
+.dashboard .level-panel > h3 {
+  text-align: center;
+  font-size: 19px;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.dashboard .level-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.dashboard .xp-heading,
+.dashboard .xp-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard .xp-heading {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.dashboard .xp-heading strong,
+.dashboard .xp-next b {
+  color: var(--amber-light);
+}
+
+.dashboard .xp-heading strong {
+  font-size: 11px;
+}
+
+.dashboard .xp-heading small {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.dashboard .xp-track,
+.dashboard .mission-track {
+  width: 100%;
+  height: 7px;
+  background: #37362f;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 11px 0;
+}
+
+.dashboard .xp-track span {
+  display: block;
+  width: 81.6%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg,#a9783d,#efc987);
+}
+
+.dashboard .xp-next {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .xp-next b {
+  margin-left: 4px;
+}
+
+.dashboard .level-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 21px 0;
+}
+
+.dashboard .streak-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard .streak-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #3a2d1e;
+  color: var(--amber-light);
+  font-size: 19px;
+}
+
+.dashboard .streak-row > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard .streak-row strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.dashboard .streak-row span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .streak-days {
+  display: flex;
+  gap: 3px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.dashboard .streak-days i {
+  width: 5px;
+  height: 15px;
+  background: #514332;
+  border-radius: 4px;
+}
+
+.dashboard .streak-days i.today {
+  background: var(--amber);
+}
+
+/* MISSIONS + ACHIEVEMENTS */
+
+.dashboard .engagement-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 20px;
+}
+
+.dashboard .mission-panel {
+  min-width: 0;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(214,164,92,.16),transparent 42%),
+    linear-gradient(140deg,#30271d,#1d1c18);
+  color: var(--text);
+  border: 1px solid #5b4933;
+  border-radius: 13px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(0,0,0,.24);
+}
+
+.dashboard .mission-marker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--amber-light);
+}
+
+.dashboard .mission-marker span {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dashboard .mission-marker i {
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+
+.dashboard .mission-copy {
+  margin: 24px 0;
+}
+
+.dashboard .mission-copy h3 {
+  font-size: 21px;
+  line-height: 1.4;
+  max-width: 350px;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.dashboard .mission-copy p {
+  color: #b9b2a5;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+.dashboard .mission-progress {
+  margin-top: auto;
+}
+
+.dashboard .mission-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #b9b2a5;
+}
+
+.dashboard .mission-progress strong {
+  color: var(--text);
+}
+
+.dashboard .mission-track {
+  background: #4b4030;
+}
+
+.dashboard .mission-track span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg,#b17d42,#efc987);
+  border-radius: inherit;
+}
+
+.dashboard .mission-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 20px;
+  background: linear-gradient(100deg,#d6a45c,#efc987);
+  color: #211b12;
+  border: none;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  cursor: pointer;
+  transition: filter .2s ease;
+}
+
+.dashboard .mission-button:hover {
+  filter: brightness(1.1);
+}
+
+/* ACHIEVEMENTS */
+
+.dashboard .achievement-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard .achievement-count {
+  color: var(--amber-light);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.dashboard .achievement-count i {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.dashboard .achievement-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  min-width: 0;
+}
+
+.dashboard .badge-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #3a3021;
+  color: var(--amber-light);
+  border: 1px solid #51412b;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.dashboard .achievement-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard .achievement-item strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.dashboard .achievement-item small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .achievement-item > b {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 8px;
+  letter-spacing: .5px;
+  color: var(--amber-light);
+}
+
+.dashboard .achievement-item.locked {
+  opacity: .5;
+}
+
+.dashboard .achievement-item.locked > b {
+  color: var(--muted);
+}
+
+/* MARKET WATCH */
+
+.dashboard .market-heading {
+  margin-bottom: 23px;
+}
+
+.dashboard .watch-count {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  vertical-align: middle;
+}
+
+.dashboard .view-all {
+  background: #393022;
+  border: 1px solid #59462d;
+  border-radius: 7px;
+  padding: 11px 14px;
+  color: var(--amber-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dashboard .view-all:hover {
+  background: #4a3b27;
+}
+
+.dashboard .market-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard .market-table-head,
+.dashboard .market-row {
+  display: grid;
+  grid-template-columns: minmax(170px,1.7fr) minmax(100px,1fr) minmax(90px,.9fr) minmax(80px,.8fr) minmax(110px,.9fr);
+  align-items: center;
+  gap: 12px;
+  min-width: 680px;
+}
+
+.dashboard .market-table-head {
+  padding: 12px 10px;
+  background: #151612;
+  border: 1px solid #303129;
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .7px;
+}
+
+.dashboard .market-row {
+  padding: 17px 10px;
+  border-bottom: 1px solid var(--border);
+  animation: vestoraRowIn .35s ease both;
+  animation-delay: calc(var(--row-index,0) * 60ms);
+}
+
+@keyframes vestoraRowIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard .instrument-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.dashboard .company-mark {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dashboard .company-mark.lime {
+  color: #b8ce8e;
+  background: #303a25;
+}
+
+.dashboard .company-mark.violet {
+  color: #c1a9e3;
+  background: #352c42;
+}
+
+.dashboard .company-mark.rose {
+  color: #dfa2ac;
+  background: #402a30;
+}
+
+.dashboard .company-mark.blue {
+  color: #a6c5d7;
+  background: #293740;
+}
+
+.dashboard .instrument-cell > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.dashboard .instrument-cell strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.dashboard .instrument-cell div span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.dashboard .instrument-cell i {
+  font-style: normal;
+  margin: 0 3px;
+}
+
+.dashboard .price-cell {
+  color: var(--text);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.dashboard .change-cell {
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard .change-cell i {
+  margin-left: 5px;
+  font-style: normal;
+}
+
+.dashboard .change-cell.positive {
+  color: var(--green);
+}
+
+.dashboard .change-cell.negative {
+  color: #d78c88;
+}
+
+.dashboard .mini-chart {
+  width: 76px;
+  height: 28px;
+  max-width: 100%;
+}
+
+.dashboard .mini-chart polyline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dashboard .mini-chart.positive {
+  color: var(--green);
+}
+
+.dashboard .mini-chart.negative {
+  color: #d78c88;
+}
+
+.dashboard .trade-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.dashboard .trade-actions button {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #655035;
+  background: #30271d;
+  color: var(--amber-light);
+  font-size: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dashboard .trade-actions button:last-child {
+  background: #302324;
+  color: #d99b9b;
+  border-color: #5a3939;
+}
+
+.dashboard .trade-actions button:hover {
+  filter: brightness(1.2);
+}
+
+.dashboard .market-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.dashboard .market-disclaimer span {
+  color: var(--amber);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.dashboard .empty-search {
+  padding: 25px 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* NOTIFICATION */
+
+.dashboard .toast-message {
+  position: fixed;
+  z-index: 1000;
+  right: 25px;
+  bottom: 25px;
+  max-width: min(420px,calc(100vw - 40px));
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 18px;
+  background: #29251e;
+  color: var(--text);
+  border: 1px solid #705738;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.35);
+  font-size: 12px;
+}
+
+.dashboard .toast-message button {
+  background: transparent;
+  color: var(--text);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1100px) {
+  .dashboard { padding: 25px; }
+  .dashboard .stats-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard .main-grid { grid-template-columns: minmax(0,1.4fr) minmax(260px,1fr); }
+  .dashboard .engagement-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width:750px) {
+  .dashboard { padding: 18px 15px 35px; gap: 18px; }
+  .dashboard .market-hero { min-height: 220px; }
+  .dashboard .bull-background { width: 75%; opacity: .55; }
+  .dashboard .hero-content { padding: 25px; }
+  .dashboard .stats-grid { gap: 12px; }
+  .dashboard .stat-card { padding: 16px; min-height: 135px; }
+  .dashboard .main-grid,
+  .dashboard .engagement-grid { grid-template-columns: 1fr; }
+  .dashboard .performance-panel,
+  .dashboard .level-panel,
+  .dashboard .mission-panel,
+  .dashboard .achievements-panel,
+  .dashboard .market-panel { padding: 19px; }
+}
+
+@media (max-width:450px) {
+  .dashboard .stats-grid { grid-template-columns: 1fr; }
+  .dashboard .panel-heading { align-items: flex-start; flex-direction: column; }
+  .dashboard .range-tabs { align-self: flex-start; }
+  .dashboard .market-heading { gap: 15px; }
+  .dashboard .chart-footnote { flex-direction: column; }
+  .dashboard .chart-x-labels span:nth-child(2),
+  .dashboard .chart-x-labels span:nth-child(4) { display: none; }
+}
+
+/* =========================================
+   VESTORA — GLOBAL DARK THEME
+========================================= */
+
+:root {
+  background: #111210;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: #111210 !important;
+}
+
+body {
+  color: #f2eee5;
+}
+
+.app-layout {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(119, 91, 51, 0.09),
+      transparent 48%
+    ),
+    #111210 !important;
+}
+
+.main-content {
+  min-height: calc(100vh - 75px);
+  background: transparent !important;
+}
+
+/* =========================================
+   PREMIUM TOP NAVIGATION
+========================================= */
+
+.top-navigation {
+  background: rgba(25, 26, 22, 0.97) !important;
+  border-bottom: 1px solid #39372f !important;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* Brand */
+
+.brand {
+  color: #e8c58d !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+}
+
+.brand span {
+  display: block;
+  margin-top: 4px;
+  color: #999183 !important;
+  font-size: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+}
+
+/* Navigation links */
+
+.navigation-menu {
+  gap: 8px;
+}
+
+.nav-link {
+  color: #aaa69a !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #f0d2a0 !important;
+  background: rgba(214, 164, 92, 0.08) !important;
+}
+
+.nav-link.active {
+  color: #e8c58d !important;
+  background: rgba(214, 164, 92, 0.11) !important;
+  border: 1px solid rgba(214, 164, 92, 0.25) !important;
+}
+
+/* Coming soon section */
+
+.coming-soon {
+  color: #f2eee5;
+  background: transparent !important;
+}
+
+.coming-soon h2 {
+  color: #e8c58d;
+}
+
+.coming-soon p {
+  color: #99958a;
+}
+
